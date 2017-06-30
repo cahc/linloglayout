@@ -72,7 +72,6 @@ The parameters repuExponent and attrExponent are also mentioned in the articles 
 
 --------------------------layoutTips----------------------------------------
 
-Layouts
 
 Use more iterations. The number of iterations is a parameter of the method minimizeEnergy of the classes MinimizerBarnesHut and MinimizerClassic (called in the main method of class LinLogLayout). While 100 iterations suffice for many graphs up to a few hundred nodes, larger or "difficult" graphs may require more iterations. Increasing the number of iterations is particularly helpful if the energy values printed by LinLogLayout still decrease notably during the last 5 percent of the iterations (e.g., from iteration 95 to iteration 100).
 Reduce or eliminate gravitation. The gravitation factor is a parameter of the constructor of the classes MinimizerBarnesHut and MinimizerClassic (called in the main method of class LinLogLayout). Gravitation attracts all nodes to the barycenter of the layout. This prevents nodes from being moved to far from the remaining graph, but also distorts the layout. To reduce this distortion, set the gravitation factor to a very small value like 0.01 or 0.001. To eliminate the distortion entirely, set the gravitation factor to 0.0 -- but only if the graph is connected, otherwise the unconnected components will fly away into infinity (which will likely cause the minimizer to produce warnings like "The node distances in the layout are extremely nonuniform.").
